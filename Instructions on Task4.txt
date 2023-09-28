@@ -1,0 +1,17 @@
+1.	Launch EMR with 100 GB EBS volume and login
+2.	Download the raw files in /home/hadoop/:
+wget https://nyc-tlc-upgrad.s3.amazonaws.com/yellow_tripdata_2017-01.csv
+wget https://nyc-tlc-upgrad.s3.amazonaws.com/yellow_tripdata_2017-02.csv
+wget https://nyc-tlc-upgrad.s3.amazonaws.com/yellow_tripdata_2017-03.csv
+wget https://nyc-tlc-upgrad.s3.amazonaws.com/yellow_tripdata_2017-04.csv
+wget https://nyc-tlc-upgrad.s3.amazonaws.com/yellow_tripdata_2017-05.csv
+wget https://nyc-tlc-upgrad.s3.amazonaws.com/yellow_tripdata_2017-06.csv
+3.	Push the python code mrtask_*.py to /home/hadoop using winscp:
+4.	Trigger the jobs:
+python MRJob_task_a.py yellow_tripdata_2017-0* > MRJob_task_a.txt
+python MRJob_task_b.py yellow_tripdata_2017-0* > MRJob_task_b.txt
+python MRJob_task_c.py yellow_tripdata_2017-0* > MRJob_task_c.txt
+python MRJob_task_d.py yellow_tripdata_2017-0* > MRJob_task_d.txt
+python MRJob_task_e.py yellow_tripdata_2017-0* > MRJob_task_e.txt
+python MRJob_task_f.py yellow_tripdata_2017-0* > MRJob_task_f.txt
+5.	Documet the results in a doc and convert to PDF and share it with me
